@@ -138,7 +138,7 @@ KeysController.updateKeys = function() {
             KeysController.deleteAccount(index)
         });
         var detLink = $('<a href="#"><h3>' + key + '</h3><p>' + account.name + '</p></a>');
-        var accElem = $('<li>').append(detLink).append(delLink);
+        var accElem = $('<li data-clipboard-text="'+ key +'">').append(detLink).append(delLink);
         // Add HTML element
         accountList.append(accElem);
     });
